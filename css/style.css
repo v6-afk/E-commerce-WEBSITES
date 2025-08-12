@@ -305,7 +305,7 @@ button {
      background-color: /*rgb(0, 41, 0)*/ rgb(4, 155, 4);
      border-radius: 50px;
      border: 2px double #ddd;
-     box-shadow: -5px -5px 10px rgba(255, 255, 255, 0), /* This creates the light bevel effect (top-left) */
+     box-shadow: -5px -1px 10px rgba(255, 255, 255, 0), /* This creates the light bevel effect (top-left) */
     5px 5px 10px rgba(0, 0, 0, 0.2),         /* This creates the dark bevel effect (bottom-right) */
     0 0 10px 5px white;
      padding: 20px;
