@@ -5,7 +5,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
  ----------------------------------------*****/
@@ -144,7 +146,7 @@ a,
      -moz-transition: all .3s ease-in-out;
      -ms-transition: all .3s ease-in-out;
      -o-transition: all .3s ease-in-out;
-     transition: all .3s ease-in-out;
+     transition: all 1s ease-in-out;
 }
 
 img {
@@ -177,7 +179,6 @@ img {
 
      font-size: 36pt!important;
      
-
 }
 }
 
@@ -198,18 +199,15 @@ img {
           height: auto;
      }
 
-     #sec1 {
-          background-size: contain;
-
-     }
-
-     #place {
+     /* #place {
           left: 9%!important;
           font-size: 60pt!important;
           font-weight: bolder!important;
           width: 90%;
 
      }
+
+     */
 
      .clients {
           text-align: center!important;
@@ -300,6 +298,20 @@ button {
 
 
 /**-- heading section --**/
+#clogo {
+ 
+     width: 170px;
+     height: auto;
+     background-color: /*rgb(0, 41, 0)*/ rgb(4, 155, 4);
+     border-radius: 50px;
+     border: 2px double #ddd;
+     box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.7), /* This creates the light bevel effect (top-left) */
+    5px 5px 10px rgba(0, 0, 0, 0.2),         /* This creates the dark bevel effect (bottom-right) */
+    0 0 10px 5px white;
+     padding: 20px;
+     margin-bottom: 15px;
+
+}
 
 .main_heading {
      text-align: center;
@@ -505,11 +517,13 @@ a.readmore_bt {
 .header {
      font-family: poppins;
      padding: 10px 0px;
-     background: url(../images/hea-black.png);
+     background: url(../images/hea-grey.png);
      background-repeat: no-repeat;
-background-size: 100% 100%;
-background-position: center center;
+     background-size: 100% 100%;
+     background-position: center center;
+
 }
+
 
 .logo {
      float: left;
@@ -523,6 +537,19 @@ nav.main-menu {
      margin-left: 0;
 }
 
+.main-menu ul>li:hover, .location_icon_bottum ul li:hover {
+background-color: whitesmoke;
+border: 2px double wheat;
+padding-bottom: 10px;
+border-radius: 25px;
+-webkit-text-fill-color: black;
+}
+
+/* This styles the last li element on the main navbar */
+
+.main-menu ul li:last-child a:hover {
+    padding-right: 20px;
+}
 ul.top_icon {
      float: right;
      padding-top: 17px;
@@ -547,7 +574,7 @@ ul.top_icon li a {
 
 .menu-area-main li:hover a,
 .menu-area-main li:focus a {
-     color: #ffff;
+     color: black;
 }
 
 .menu-area-main li.active a {
@@ -1138,10 +1165,6 @@ ul.top_icon li a {
 }
 
 
-
-.main-menu ul li:last-child a {
-     padding-right: 0;
-}
 .sub-down li {
      background: #ffffff;
 }
@@ -1652,13 +1675,13 @@ background-repeat: no-repeat;
 left: -38px;;
 }
 .location_icon_bottum ul li {
-     display: inline-block;
-padding: 17px 10px;
+display: inline-block;
+padding: 10px 10px;
 color: #fff;
 font-size: 15px;
 font-weight: 500;
 }
-.location_icon_bottum ul li img {padding-right: 10px;}
+.location_icon_bottum ul li img {padding-right: 10px; color: green;}
 
 /** banner **/
 
@@ -2228,36 +2251,52 @@ ul.location_icon span {
       text-align: center;
       color: rgb(24, 6, 6);
       box-sizing: border-box;
-      
-    
-      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 5em;
+           
   }
 
-  #place {
+  /*#place {
      
      position: absolute;
      top: 25%;
-     /*left: 20%;*/
+     /*left: 20%;
      left: 21.9%;
 
   }
+     */
 
   #fp {
      font-size: 72pt;
-     font-weight: 500;
-     color: rgb(107, 29, 29);
-     opacity: 0.9;
-     
+     font-weight: bolder;
+     color:#243739;
+     opacity: 1;
+     font-family: "Open Sans",Montserrat,'Courier New', Courier, monospace;
+     -webkit-text-fill-color: /*#005207*/ #ADD8E6;
+    -webkit-text-stroke: 1px white;
+     position: relative;
+   }
+
+   #fp::before {
+     -webkit-text-stroke: 4px blue;
+     content: attr(data-text);
+     -webkit-text-fill-color: transparent;
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: -1;
+
    }
 
    #sp, #tp {
      font-size: 26pt;
      font-weight: lighter;
      margin-top: 60px;
-     color: rgb(167, 159, 159);
+     color: #636262;
+     font-family:Arial, Helvetica, sans-serif;
    }
-
-   
 
    #up {
 
@@ -2266,12 +2305,18 @@ ul.location_icon span {
      margin: 60px 25% 0 25%;
      padding: 10px;
      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     color: red;
+     -webkit-text-fill-color: red;
+     -webkit-text-stroke: 1px rgb(0, 204, 255);
    }
 
    #up:hover {
 
-     color: yellow;
-     background-color: white;
+     color: rgb(0, 174, 255);
+     background-color: rgb(0, 0, 0);
+     box-shadow: -5px -5px 15px rgb(81, 255, 0), /* This creates the light bevel effect (top-left) */
+     5px 5px 15px rgb(81, 255, 0),         /* This creates the dark bevel effect (bottom-right) */
+     0 0 10px 5px white;
    }
 
 .cross_layout {
