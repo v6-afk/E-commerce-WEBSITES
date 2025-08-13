@@ -302,7 +302,7 @@ button {
  
      width: 170px;
      height: auto;
-     background-color: /*rgb(0, 41, 0)*/ rgb(4, 155, 4);
+     background-color: /*rgb(0, 41, 0)*/ rgb(6, 66, 6);
      border-radius: 50px;
      border: 2px double #ddd;
      box-shadow:  4px 2px 2px 2px #2ccb04, -2px -5px 10px #4f4a4a, -6px 1px 3px 1px white;
@@ -1679,7 +1679,7 @@ color: #fff;
 font-size: 15px;
 font-weight: 500;
 }
-.location_icon_bottum ul li img {padding-right: 10px; color: green;}
+.location_icon_bottum ul li img {padding-right: 10px;}
 
 /** banner **/
 
@@ -2153,6 +2153,7 @@ ul.location_icon span {
      background: #fff;
      padding: 20px 0px 20px 0;
      margin-top: 50px;
+     background-color: rgb(163, 163, 163);
 }
 .copyright p {
      color: #000;
@@ -2304,13 +2305,13 @@ ul.location_icon span {
      padding: 10px;
      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
      color: red;
-     -webkit-text-fill-color: red;
-     -webkit-text-stroke: 1px rgb(0, 204, 255);
+     -webkit-text-fill-color: #f2b87f;
+     /*-webkit-text-stroke: 1px rgb(0, 0, 0);*/
    }
 
    #up:hover {
 
-     color: rgb(0, 174, 255);
+     -webkit-text-fill-color: rgb(153, 255, 0);
      background-color: rgb(0, 0, 0);
      box-shadow: -5px -5px 15px rgb(81, 255, 0), /* This creates the light bevel effect (top-left) */
      5px 5px 15px rgb(81, 255, 0),         /* This creates the dark bevel effect (bottom-right) */
